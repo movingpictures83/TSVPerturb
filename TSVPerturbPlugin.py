@@ -2,7 +2,7 @@ import sys
 
 class TSVPerturbPlugin:
     def input(self, filename):
-       self.infile = open(filename, 'r')
+        self.infile = open(filename, 'r')
 
     def run(self):
         pass
@@ -19,7 +19,8 @@ class TSVPerturbPlugin:
           outfile.write('\t')
           for i in range(1,len(contents)):
               if (float(contents[i]) == 0):
-                  outfile.write("0.000000001")
+                  outfile.write("0.01")
+                  #outfile.write("0.000000001")
               else:
                   outfile.write(contents[i])
               if (i == len(contents)-1):
